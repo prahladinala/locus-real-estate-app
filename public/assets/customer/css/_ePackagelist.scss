@@ -1,0 +1,68 @@
+.price-list {
+  background-color: #fff;
+  .row {
+    row-gap: toRem(30);
+  }
+}
+.packageBox {
+  background-color: #3c4d74;
+  border-radius: toRem(10);
+  padding: toRem(30) toRem(36);
+  position: relative;
+  overflow: hidden;
+  &::before {
+    content: url(../images/bg/price_bg.png);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+}
+.packageTitle {
+  display: inline-block;
+  max-width: toRem(111);
+  min-width: toRem(94);
+  background-color: $price-badge-color;
+  border-radius: 22px;
+  padding: toRem(5) toRem(18);
+  @include fontFamily(16, $fw_Regular, 20, #fff);
+  margin-bottom: toRem(20);
+}
+.packagePrice {
+  @include fontFamily(14, $fw_Regular, 17, #fff);
+  margin-bottom: toRem(36);
+  transition: all 0.3s;
+  span {
+    @include fontFamily(30, $fw_SemiBold, 36, #fff);
+    transition: all 0.3s;
+  }
+}
+.packageFeatures {
+  margin-bottom: toRem(35);
+  li {
+    @include fontFamily(15, $fw_Medium, 30, #fff);
+    padding-bottom: toRem(12);
+    transition: all 0.3s;
+    &:last-child {
+      padding-bottom: 0;
+    }
+    &.price-muted {
+      color: $price-mute-text;
+    }
+  }
+}
+.packageSubs_btn {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: toRem(150);
+  height: toRem(50);
+  background-color: $green;
+  border: 1px solid $green;
+  border-radius: toRem(5);
+  @include fontFamily(15, $fw_Medium, 19, #fff);
+  &:hover {
+    color: #fff;
+  }
+}

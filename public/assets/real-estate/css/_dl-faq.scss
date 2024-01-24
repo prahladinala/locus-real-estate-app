@@ -1,0 +1,114 @@
+.faq-sec {
+  padding-bottom: 120px;
+}
+
+.faq-card {
+  max-width: 370px;
+  text-align: center;
+  padding: 30px;
+  @extend .overly;
+
+  &::before {
+    /*  background: $white;
+        width: 80%;
+        left: 50%;
+        transform: translateX(-50%);
+        top: 40px;
+        border-radius: 10px; */
+    background: rgb(0, 170, 108);
+    background: linear-gradient(
+      90deg,
+      rgba(0, 170, 108, 0.8130602582830007) 0%,
+      rgba(36, 73, 255, 0.9026961126247374) 40%,
+      rgba(11, 22, 45, 0.8578781854538691) 56%,
+      rgba(255, 107, 36, 1) 98%
+    );
+    opacity: 0.58;
+    z-index: -1;
+    height: 80%;
+    border-radius: 5px;
+  }
+
+  .faq-inner {
+    background-color: $white;
+    padding: 45px;
+  }
+
+  h3 {
+    font-size: 24px;
+  }
+
+  img {
+    display: block;
+    margin: 20px auto 0px;
+  }
+}
+.faq-btn {
+  @include d-center;
+  width: 150px;
+  height: 50px;
+  background: rgb(0, 170, 108);
+  background: linear-gradient(
+    90deg,
+    rgba(0, 170, 108, 0.8130602582830007) 0%,
+    rgba(36, 73, 255, 0.9026961126247374) 100%
+  );
+  border-radius: 5px;
+  margin: 0 auto;
+  @include fontFamily(15, $fw_Medium, 16, #fff);
+  margin-top: 40px;
+}
+.faq-wrap {
+  .accordion-button:not(.collapsed) {
+    color: $black;
+    background-color: transparent;
+    box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.125);
+  }
+
+  .accordion-button,
+  .accordion-button:not(.collapsed) {
+    background-color: transparent;
+    box-shadow: none;
+    border: 0 none;
+  }
+  .accordion-button {
+    &::after {
+      height: 10px;
+      background-image: url(../images/minus.svg);
+    }
+    &.collapsed {
+      &::after {
+        height: 20px;
+        background-image: url(../images/plus.svg);
+      }
+    }
+  }
+
+  .accordion-item {
+    background: transparent;
+    border: 0 none;
+    margin-bottom: 20px;
+    .accordion-header {
+      border-bottom: 1px solid $border-color;
+      @extend .overly;
+      &::before {
+        width: 10px;
+        height: 10px;
+        background-color: $black;
+        @include border-radius(50px);
+        top: 50%;
+        transform: translateY(-50%);
+      }
+    }
+    &:last-child {
+      .accordion-header {
+        border: none;
+      }
+    }
+
+    button {
+      font-size: 18px;
+      font-weight: 600;
+    }
+  }
+}

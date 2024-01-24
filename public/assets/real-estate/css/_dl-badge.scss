@@ -1,0 +1,24 @@
+// Badge
+.eBadge {
+  display: inline-block;
+  padding: 5px 10px;
+  outline: 10px;
+  @include fontFamily(14, $fw_Medium, 17, #fff);
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: baseline;
+  border-radius: 3px;
+  &-soft {
+    background-color: rgba($green, 15%);
+    color: $green;
+    &:hover {
+      color: $green;
+    }
+  }
+  &-green {
+    background-color: $green;
+    &:hover {
+      color: #fff;
+    }
+  }
+}

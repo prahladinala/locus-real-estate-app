@@ -1,0 +1,1 @@
+{"MAIL_MAILER":"SMTP","MAIL_HOST":"smtp_host","MAIL_PORT":"port","MAIL_USERNAME":"smtp_username","MAIL_PASSWORD":"smtp_password","MAIL_ENCRYPTION":"tls","MAIL_FROM_ADDRESS":"smtp_from_email","MAIL_FROM_NAME":"Laravel application"}

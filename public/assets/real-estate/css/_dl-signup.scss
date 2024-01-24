@@ -1,0 +1,235 @@
+$bg-signup: #f5f8fe;
+$black: #0b162d;
+$black2: #69696a;
+$blue: #007bff;
+$seperate: #d4d4d4;
+
+// Spacing
+.m-width-408 {
+  max-width: toRem(408) !important;
+}
+.pb-14 {
+  padding-bottom: toRem(14);
+}
+.pb-16 {
+  padding-bottom: toRem(16);
+}
+.pb-60 {
+  padding-bottom: toRem(60);
+}
+.mt-14 {
+  margin-top: toRem(14);
+}
+.mt-25 {
+  margin-top: toRem(25);
+}
+
+.sign-section {
+  position: relative;
+  overflow: hidden;
+  background-color: #f5f8fe;
+  // height: toRem(876);
+}
+
+.title-form {
+  @include fontFamily(34, $fw_SemiBold, 41, $black);
+}
+.subtitle-form {
+  @include fontFamily(15, $fw_Regular, 30, $black2);
+}
+.subtitle-form2 {
+  @include fontFamily(15, $fw_Medium, 30, $black2);
+  a {
+    color: $blue;
+    text-decoration: underline;
+  }
+}
+
+.sign-wrap {
+  max-width: toRem(408);
+  margin: 0 auto;
+  &.sign-wrap2 {
+    max-width: toRem(476);
+  }
+  @media screen and (max-width: 991px) {
+    padding: toRem(120) toRem(0);
+  }
+}
+.sign-btn-other {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: toRem(6);
+  width: 100%;
+  height: toRem(45);
+  background-color: #fff;
+  border-radius: toRem(5);
+  @include fontFamily(15, $fw_Medium, 30, $black);
+  span {
+    display: inline-block;
+    background: url(../images/icon/google-logo.svg);
+    width: toRem(18);
+    height: toRem(18);
+  }
+  &:hover {
+    color: $black;
+  }
+}
+.sign-btn-main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: toRem(45);
+  background-color: $blue;
+  border-radius: toRem(5);
+  @include fontFamily(15, $fw_SemiBold, 30, #fff);
+  &:hover {
+    color: #fff;
+  }
+}
+.sign-btn-resend {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: toRem(116);
+  height: toRem(45);
+  background-color: $blue;
+  border-radius: toRem(3);
+  @include fontFamily(13, $fw_Medium, 16, #fff);
+  &:hover {
+    color: #fff;
+  }
+}
+
+.signup-seperate {
+  display: block;
+  width: 100%;
+  text-align: center;
+  position: relative;
+  margin: toRem(26) toRem(0) toRem(20);
+  @include fontFamily(15, $fw_Medium, 30, $black);
+  &::after,
+  &::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    width: 47%;
+    height: toRem(1);
+    background-color: $seperate;
+  }
+  &::before {
+    left: 0;
+  }
+}
+
+// form
+.eForm-label {
+  display: inline-block;
+  margin-bottom: toRem(12);
+  @include fontFamily(16, $fw_Medium, 30, $black);
+}
+.eForm-control {
+  display: block;
+  width: 100%;
+  height: toRem(45);
+  padding: toRem(7) toRem(16);
+  background-color: #fff;
+  background-clip: padding-box;
+  border: toRem(1) solid $seperate;
+  appearance: none;
+  border-radius: toRem(5);
+  @include fontFamily(12, $fw_Regular, 30, $black2);
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  &:focus,
+  &:hover {
+    border: toRem(1) solid $seperate;
+    @include boxShadow(0, 0, 0, #00000000);
+  }
+  &::placeholder {
+    @include fontFamily(12, $fw_Regular, 30, $black2);
+  }
+}
+.eForm-control2 {
+  display: block;
+  width: 100%;
+  padding: toRem(9) toRem(16);
+  @include fontFamily(15, $fw_Regular, 22, $gray);
+  background-color: #fff;
+  background-clip: padding-box;
+  border: toRem(1) solid $eColor_Blackish_bg;
+  appearance: none;
+  border-radius: toRem(5);
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  &:focus,
+  &:hover {
+    border: toRem(1) solid $green;
+    @include boxShadow(0, 0, 0, #00000000);
+  }
+  &::placeholder {
+    @include fontFamily(14, $fw_Regular, 22, #69696a90);
+  }
+  // &.eForm-password {
+  //   padding: 0;
+  //   height: toRem(42);
+  //   padding-left: toRem(16);
+  // }
+}
+.eForm-password {
+  padding: 0;
+  height: toRem(42);
+  padding-left: toRem(16);
+}
+.verifyInput {
+  gap: toRem(30);
+  input {
+    width: toRem(60);
+    height: toRem(45);
+    text-align: center;
+    background-color: transparent;
+    border: none;
+    border-bottom: toRem(3) solid $blue;
+    border-radius: 0;
+    @include fontFamily(30, $fw_SemiBold, 36, $black);
+    &:focus,
+    &:hover {
+      border: none;
+      border-bottom: toRem(3) solid $blue;
+      background-color: transparent;
+    }
+    &::placeholder {
+      @include fontFamily(30, $fw_SemiBold, 36, $black);
+    }
+  }
+}
+.forgetPass {
+  display: inline-block;
+  width: 100%;
+  @include fontFamily(15, $fw_Medium, 30, $black);
+  text-align: right;
+  padding-bottom: toRem(10);
+  &:hover {
+    color: $black;
+  }
+}
+.verify-code {
+  gap: toRem(30);
+  margin-bottom: toRem(30);
+}
+.verifyInput {
+  gap: toRem(30);
+  input {
+    width: toRem(60);
+  }
+}
+
+.bg-image {
+  width: 100%;
+  height: toRem(800);
+  background-image: url("../images/bg/sign-bg.png");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}

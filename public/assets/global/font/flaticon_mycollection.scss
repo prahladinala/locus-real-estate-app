@@ -1,0 +1,57 @@
+$flaticon_mycollection-font: "flaticon_mycollection";
+
+@font-face {
+    font-family: $flaticon_mycollection-font;
+    src: url("./flaticon_mycollection.ttf?b7e9b9846331cf3c8b0b999aabf8ba12") format("truetype"),
+url("./flaticon_mycollection.woff?b7e9b9846331cf3c8b0b999aabf8ba12") format("woff"),
+url("./flaticon_mycollection.woff2?b7e9b9846331cf3c8b0b999aabf8ba12") format("woff2"),
+url("./flaticon_mycollection.eot?b7e9b9846331cf3c8b0b999aabf8ba12#iefix") format("embedded-opentype"),
+url("./flaticon_mycollection.svg?b7e9b9846331cf3c8b0b999aabf8ba12#flaticon_mycollection") format("svg");
+}
+
+i[class^="flaticon-"]:before, i[class*=" flaticon-"]:before {
+    font-family: flaticon_mycollection !important;
+    font-style: normal;
+    font-weight: normal !important;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+$flaticon_mycollection-map: (
+    "filter": "\f101",
+    "user": "\f102",
+    "bed": "\f103",
+    "bathtub": "\f104",
+    "car": "\f105",
+    "right-triangle": "\f106",
+    "calendar": "\f107",
+    "right-triangle-1": "\f108",
+);
+
+.flaticon-filter:before {
+    content: map-get($flaticon_mycollection-map, "filter");
+}
+.flaticon-user:before {
+    content: map-get($flaticon_mycollection-map, "user");
+}
+.flaticon-bed:before {
+    content: map-get($flaticon_mycollection-map, "bed");
+}
+.flaticon-bathtub:before {
+    content: map-get($flaticon_mycollection-map, "bathtub");
+}
+.flaticon-car:before {
+    content: map-get($flaticon_mycollection-map, "car");
+}
+.flaticon-right-triangle:before {
+    content: map-get($flaticon_mycollection-map, "right-triangle");
+}
+.flaticon-calendar:before {
+    content: map-get($flaticon_mycollection-map, "calendar");
+}
+.flaticon-right-triangle-1:before {
+    content: map-get($flaticon_mycollection-map, "right-triangle-1");
+}

@@ -1,0 +1,37 @@
+// Pagingation
+.epagination {
+  .page-item {
+    &:first-child {
+      margin-left: 0;
+    }
+    .page-link {
+      width: toRem(40);
+      height: toRem(40);
+      @include d-center;
+      position: relative;
+      @include fontFamily(18, $fw_SemiBold, 15, $gray);
+      text-decoration: none;
+      background-color: transparent;
+      border: toRem(1) solid $pagi-border-color;
+      border-radius: toRem(5);
+      transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+        border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+      &:focus {
+        box-shadow: 0 0 0 rgba(0, 0, 0, 0);
+      }
+      &.prev,
+      &.next {
+        min-width: toRem(103) !important;
+        gap: toRem(8);
+        @include fontFamily(14, $fw_Medium, 15, $gray);
+      }
+      &:hover,
+      &.active {
+        z-index: 2;
+        color: #fff;
+        background-color: $green;
+        border: toRem(1) solid $green;
+      }
+    }
+  }
+}

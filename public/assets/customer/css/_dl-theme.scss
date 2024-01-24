@@ -1,0 +1,416 @@
+/*===============================================
+2. Common Style
+ ===============================================*/
+.btn {
+  padding: 12px 30px;
+  color: $white;
+  font-weight: 500;
+
+  &.btn-mute {
+    color: $primary;
+
+    &:hover {
+      background-color: $primary;
+      color: $white;
+    }
+  }
+
+  &:hover,
+  &:focus {
+    color: $white;
+    box-shadow: none;
+  }
+
+  &.btn-xs {
+    padding: 7px 15px;
+  }
+}
+
+.overly {
+  position: relative;
+  z-index: 1;
+
+  &::before {
+    position: absolute;
+    content: "";
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background: $primary;
+  }
+}
+
+.list-clear {
+  @include list-clear;
+}
+
+.section-padding {
+  padding: 100px 0;
+}
+
+.section-intro {
+  max-width: 65%;
+
+  span {
+    background: #e5f6f0;
+    padding: 13px 35px;
+    font-size: 18px;
+    font-weight: 500;
+    @include border-radius(5px);
+    color: $primary;
+    display: inline-block;
+    margin-bottom: 40px;
+  }
+
+  p {
+    color: $primary;
+  }
+}
+
+.sm-title {
+  @include heading;
+  font-size: 20px;
+  @extend.overly;
+  display: inline-block;
+
+  &::before {
+    height: 2px;
+    background-color: $primary;
+    width: 100%;
+    top: 32px;
+  }
+
+  span {
+    font-weight: 400;
+    color: $secondary;
+  }
+}
+
+.dot-title {
+  padding-left: 20px;
+  @extend .overly;
+
+  &::before {
+    width: 8px;
+    height: 8px;
+    background-color: #d4d4d4;
+    @include border-radius(50%);
+    top: 50%;
+    top: 9px;
+  }
+}
+
+.form-group {
+  margin-bottom: 15px;
+
+  label {
+    color: $headings-color;
+    margin-bottom: 5px;
+  }
+}
+
+.ct-tab button {
+  border: 0 none;
+  text-transform: capitalize;
+  @include border-radius(5px);
+
+  &.active {
+    background-color: $primary;
+    color: $white;
+  }
+}
+
+blockquote {
+  font-size: 18px;
+  color: #7e8283;
+  padding-left: 25px;
+  margin-top: 40px;
+  line-height: 32px;
+  @extend .overly;
+
+  &::before {
+    width: 8px;
+    background: $primary;
+    height: 90%;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}
+
+// OWL CAROUSEL NAV AND DOT CSS
+.ct-shadow {
+  @include box-shadow(0 2px 50px 5px rgba(0, 0, 0, 0.1));
+}
+
+.search-form {
+  position: relative;
+  z-index: 1;
+  margin-bottom: 20px;
+  &::before {
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    content: "\f002";
+    font-family: fontawesome;
+    font-size: 20px;
+  }
+
+  input {
+    border: 1px solid $border-color;
+    padding: 8px 0 8px 45px;
+  }
+}
+
+.owl-nav button {
+  position: absolute;
+  left: -22px;
+  top: 60%;
+  transform: translateY(-50%);
+  background: $white !important;
+  width: 44px;
+  height: 44px;
+  text-align: center;
+  display: inline-table;
+  @include box-shadow(0 2px 15px 5px rgba(0, 0, 0, 0.05));
+  @include border-radius(50%);
+
+  @include mobile {
+    left: -10px;
+  }
+
+  &.owl-next {
+    left: auto;
+    right: -22px;
+
+    @include mobile {
+      right: -10px;
+    }
+  }
+
+  span {
+    color: $headings-color;
+    font-size: 32px;
+    line-height: 0.75;
+  }
+}
+
+.owl-dots {
+  text-align: center;
+  margin-top: 50px;
+
+  .owl-dot {
+    span {
+      width: 10px;
+      height: 7px;
+      margin: 5px 7px;
+      background: #80a0ae;
+      display: block;
+      -webkit-backface-visibility: visible;
+      transition: opacity 0.2s ease;
+      border-radius: 30px;
+    }
+
+    &.active {
+      span {
+        width: 30px;
+        background: $white;
+      }
+    }
+  }
+}
+
+.form-group.half-form {
+  width: 48%;
+  float: left;
+
+  &::after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  @include mobile {
+    width: 100%;
+    float: none;
+  }
+}
+
+.owl-carousel .owl-item img {
+  width: auto;
+}
+
+.form-group.half-form + .half-form {
+  float: right;
+}
+.shadow {
+  box-shadow: 0 10px 50px rgba(200, 11, 11, 0.1);
+}
+.nav-link.active {
+  color: $primary;
+}
+
+.inline-btn a {
+  display: inline-block;
+  width: 48%;
+  padding: 11px;
+
+  &:last-child {
+    float: right;
+  }
+}
+
+.slick-list {
+  margin-left: -10px;
+  /* px size of slide space */
+  width: calc(100% + 20px);
+  /* add double the px size of slide space */
+}
+
+.slick-slide {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.ct-modal {
+  .modal-dialog {
+    max-width: 765px;
+  }
+  .container-modal {
+    max-width: 1170px;
+  }
+  .modal-header {
+    padding: 1rem;
+    border-bottom: 1px solid #e6e6e6;
+    background: #f1f1f1;
+    padding: 18px 30px;
+
+    h5 {
+      text-align: center;
+      width: 100%;
+      font-size: 24px;
+    }
+  }
+
+  .btn-close {
+    line-height: 1;
+    color: #707070;
+    background: #dbdbdb;
+    border-radius: 50%;
+    @include opacity(1);
+  }
+
+  .modal-body {
+    padding: 2rem 2rem 1rem;
+  }
+  .modal-header .aprt-t-info {
+    flex: 1 0 0;
+  }
+}
+
+.ct-nav {
+  border-top: 1px solid $border-color;
+  padding: 15px 10px 14px;
+
+  .nav-item {
+    .nav-link {
+      font-weight: 600;
+      color: $gray;
+
+      &.active {
+        color: $headings-color;
+      }
+
+      i {
+        width: 36px;
+        height: 36px;
+        background-color: #0064d2;
+        display: inline-block;
+        line-height: 36px;
+        text-align: center;
+        color: #fff;
+        font-size: 12px;
+        @include border-radius(50%);
+      }
+
+      span {
+        width: 32px;
+        height: 32px;
+        line-height: 32px;
+        display: inline-block;
+        text-align: center;
+        background-color: #eee;
+        font-size: 12px;
+        font-weight: 500;
+        @include border-radius(50%);
+        margin-left: 15px;
+      }
+    }
+
+    &:nth-child(2) i {
+      background-color: #ff6b24;
+    }
+
+    &:nth-child(3) i {
+      background-color: #07bbb5;
+    }
+
+    &:nth-child(4) i {
+      background-color: #00aa6c;
+    }
+  }
+}
+
+.arrow-top .slick-prev,
+.arrow-top .slick-next {
+  position: absolute;
+  top: -80px;
+  left: 85%;
+  background-color: transparent;
+  border: 1px solid #edeff1;
+  opacity: 1;
+  border: 0 none;
+  z-index: 1;
+
+  &::before {
+    background-color: $white;
+    color: $secondary;
+    @extend .ct-shadow;
+  }
+  @include mobile {
+    left: 67%;
+  }
+}
+
+.arrow-top .slick-arrow.slick-next {
+  right: 30px;
+
+  &::before {
+    background-color: $primary;
+    color: $white;
+  }
+}
+
+.datepicker .cell {
+  width: 40px;
+  height: 35px;
+  padding: 0 5px;
+}
+
+.ui-timepicker-standard .ui-menu-item {
+  a {
+    transition: none;
+    border: none;
+    color: $secondary;
+  }
+  &:nth-child(odd) a {
+    background-color: #f7f7f7;
+  }
+}
+
+.ui-timepicker-standard .ui-menu-item a:hover,
+.ui-timepicker-standard .ui-menu-item a:focus {
+  color: $white;
+  background-color: $primary;
+}

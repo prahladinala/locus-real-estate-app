@@ -1,0 +1,39 @@
+.breadcrumb-section {
+  @include widthHeight(100%, 260);
+  background-image: url(../images/bg/breadcrumb-bg.png);
+  background-size: cover;
+}
+.breadcrumb-title {
+  position: relative;
+  @include fontFamily(34, $fw_SemiBold, 41, #fff);
+  padding-top: toRem(60);
+  @media screen and (max-width: 767px) {
+    font-size: toRem(30);
+  }
+}
+.breadcrumb-title-2 {
+  padding-top: toRem(60);
+}
+
+.breadcrumb-dropdown {
+  width: toRem(191);
+  .eForm-select {
+    ~ .select2-container--default .select2-selection--single {
+      background-color: #3d4d70;
+      border-color: #3d4d70;
+      min-height: toRem(50);
+      .select2-selection__rendered {
+        font-size: toRem(15);
+        font-weight: $fw_Medium;
+        color: #fff;
+        line-height: toRem(50);
+      }
+      .select2-selection__arrow {
+        height: toRem(50) !important;
+        b {
+          background-image: url(../images/arrow-down-white.svg);
+        }
+      }
+    }
+  }
+}

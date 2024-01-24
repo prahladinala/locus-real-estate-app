@@ -1,0 +1,987 @@
+@import "variable";
+@import "dl-media-quaries";
+@import "dl-mixins";
+@import "dl-typography";
+@import "dl-theme";
+
+@import "backgrounds";
+@import "widths";
+@import "heights";
+// @import "common";
+@import "sidebar";
+@import "top_header";
+@import "main-section";
+
+body {
+  background-color: #f5f8fa;
+}
+.container {
+  max-width: 1200px;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+a,
+ul,
+ol,
+li,
+button,
+label,
+div,
+p,
+span {
+  margin: 0;
+  padding: 0;
+}
+ul,
+ol {
+  list-style: none;
+}
+img {
+  max-width: 100%;
+}
+// .main-section {
+//   margin: 0 20px;
+// }
+// .mainSection-title {
+//   padding-bottom: 14px;
+//   h4 {
+//     font-size: 16px;
+//     font-weight: $fw_SemiBold;
+//     line-height: 26px;
+//     color: $eColor_Blueish;
+//   }
+// }
+// .eSection-wrap {
+//   padding: 20px;
+//   padding-bottom: 0;
+//   margin-bottom: 20px;
+//   background-color: #fff;
+//   box-shadow: 0 6px 20px #797c8b04;
+//   border-radius: 10px;
+//   .title {
+//     border-bottom: 1px solid $eColor_Darkish;
+//     margin-bottom: 20px;
+//     padding-bottom: 18px;
+//     h3 {
+//       font-size: 15px;
+//       line-height: 23px;
+//       color: $eColor_Blueish;
+//     }
+//     p {
+//       font-size: 12px;
+//       line-height: 22px;
+//       max-width: 710px;
+//       color: $eColor_Blackish;
+//     }
+//   }
+// }
+// .eSection-wrap-2 {
+//   padding: 30px 20px;
+//   background-color: #fff;
+//   box-shadow: 0 6px 15px #00000001;
+//   border-radius: 5px;
+// }
+// .eMain {
+//   padding-bottom: 20px;
+// }
+// .column-title {
+//   margin-bottom: 20px;
+//   font-size: 13px;
+//   line-height: 22px;
+//   font-weight: $fw_Medium;
+//   color: $eColor_Blueish;
+//   padding-left: 12px;
+//   position: relative;
+//   &::before {
+//     content: "";
+//     position: absolute;
+//     top: 50%;
+//     left: 0;
+//     transform: translateY(-50%);
+//     width: 8px;
+//     height: 8px;
+//     border-radius: 50%;
+//     background-color: $eColor_Whiteish;
+//   }
+// }
+
+// .copyright-text {
+//   padding-top: 30px;
+//   padding-bottom: 13px;
+//   p {
+//     font-size: 16px;
+//     color: $eColor_Blackish;
+//     span {
+//       color: $eColor_Blue;
+//     }
+//   }
+// }
+
+// // Spacing
+// .gr-15 {
+//   row-gap: 15px;
+// }
+// .pr-10 {
+//   padding-right: 10px;
+// }
+
+// @import "progress";
+// @import "button-toolbar";
+// @import "pagination";
+// @import "alerts";
+// @import "cards";
+// @import "carousel";
+// @import "e-offcanvas";
+// @import "progressBar";
+@import "sweet-alerts";
+// @import "nav-tabs";
+// @import "colors";
+@import "eForms";
+// @import "eImages";
+// @import "eAccordion";
+// @import "eTypography";
+// @import "eCheckbox";
+// @import "eRadio";
+// @import "eSwitch";
+// @import "eGeneral";
+// @import "eToast";
+@import "eTable";
+// @import "eAdmin";
+// @import "eBreadcrumb";
+// @import "eClassRoutines";
+// @import "eAttendance";
+// @import "eUserprofile";
+// @import "eError";
+// @import "eInvoice";
+// @import "ePayment";
+@import "ePackagelist";
+// @import "eDashboard";
+
+@import "dl-header";
+@import "dl-footer";
+@import "dl-signup";
+@import "dl-breadcrumb";
+@import "dl-admin-main";
+
+// Buttons
+.sidebarLogoutBtn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  width: toRem(150);
+  height: toRem(50);
+  background-color: $sidebar-logout-btn;
+  border: 1px solid $sidebar-logout-btn;
+  border-radius: toRem(5);
+  @include fontFamily(15, $fw_Medium, 19, #fff);
+  margin-left: 30px;
+  &:hover {
+    background-color: transparent;
+    color: $sidebar-logout-btn;
+  }
+}
+
+.eBtn {
+  display: inline-block;
+  @include fontFamily(14, $fw_Medium, 22, #fff);
+  width: toRem(119);
+  height: toRem(40);
+  @include d-center;
+  background-color: $primary;
+  text-align: center;
+  text-decoration: none;
+  vertical-align: middle;
+  cursor: pointer;
+  user-select: none;
+  outline: none;
+  border: toRem(1) solid transparent;
+  border-radius: toRem(5);
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+    border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+.eBtn-green {
+  background-color: #50cd89;
+  border: 1px solid #50cd89;
+  border-radius: toRem(5);
+}
+.btn-1 {
+  width: toRem(150);
+  height: toRem(45);
+  border-radius: toRem(5);
+  border: toRem(0) solid $green;
+  background-color: $green !important;
+  @include fontFamily(15, $fw_Medium, 19, #fff);
+  &:hover {
+    background-color: transparent !important;
+    border: toRem(1) solid $green !important;
+    color: $green !important;
+  }
+}
+.btn-outline-1 {
+  width: toRem(157);
+  height: toRem(45);
+  border-radius: toRem(5);
+  border: toRem(1) solid $tb-icon;
+  background-color: transparent !important;
+  @include fontFamily(15, $fw_Medium, 19, $gray);
+  &:hover {
+    background-color: $gray !important;
+    border: toRem(1) solid $gray !important;
+    color: #fff !important;
+  }
+}
+.saveChanges-btn {
+  width: toRem(150);
+  height: toRem(50);
+  border-radius: toRem(5);
+  border: toRem(0) solid $green;
+  background-color: $green !important;
+  @include fontFamily(15, $fw_Medium, 19, #fff);
+  &:hover {
+    background-color: transparent !important;
+    border: toRem(1) solid $green !important;
+    color: $green !important;
+  }
+}
+.cancel-btn {
+  width: toRem(98);
+  height: toRem(50);
+  border-radius: toRem(5);
+  background-color: transparent !important;
+  border: toRem(1) solid $green;
+  @include fontFamily(15, $fw_Medium, 19, $green);
+  &:hover {
+    background-color: $green !important;
+    color: #fff !important;
+  }
+}
+.disable-btn {
+  width: toRem(132);
+  height: toRem(40);
+  border-radius: toRem(5);
+  background-color: $red !important;
+  border: toRem(1) solid $red;
+  @include fontFamily(14, $fw_Medium, 22, #fff);
+  &:hover {
+    background-color: transparent !important;
+    color: $red !important;
+  }
+}
+.delete-btn {
+  width: toRem(132);
+  height: toRem(40);
+  border-radius: toRem(5);
+  background-color: transparent !important;
+  border: toRem(1) solid $red;
+  @include fontFamily(14, $fw_Medium, 22, $red);
+  &:hover {
+    background-color: $red !important;
+    color: #fff !important;
+  }
+}
+.viewDetails-btn {
+  width: toRem(102);
+  height: toRem(35);
+  border-radius: toRem(5);
+  background-color: transparent !important;
+  border: toRem(1) solid $green;
+  @include fontFamily(12, $fw_Medium, 15, $green);
+  &:hover {
+    background-color: $green !important;
+    color: #fff !important;
+  }
+}
+.unfollow-btn {
+  width: toRem(86);
+  height: toRem(35);
+  border-radius: toRem(5);
+  background-color: transparent !important;
+  border: toRem(1) solid $red;
+  @include fontFamily(12, $fw_Medium, 15, $red);
+  &:hover {
+    background-color: $red !important;
+    color: #fff !important;
+  }
+}
+
+// Button Mixins
+@mixin btn-custom-1(
+  $minWidth,
+  $minHeight,
+  $p-left,
+  $p-right,
+  $bg-color,
+  $bd-width,
+  $bd-color,
+  $f-size,
+  $f-weight,
+  $line-height,
+  $f-color,
+  $bg-hover,
+  $f-hover-color
+) {
+  min-width: toRem($minWidth) !important;
+  height: toRem($minHeight) !important;
+  @include d-center;
+  padding-left: toRem($p-left) !important;
+  padding-right: toRem($p-right) !important;
+  background-color: $bg-color !important;
+  text-decoration: none;
+  vertical-align: middle;
+  cursor: pointer;
+  user-select: none;
+  border: toRem($bd-width) solid $bd-color !important;
+  border-radius: toRem(5);
+  @include fontFamily(
+    $f-size,
+    $f-weight !important,
+    $line-height,
+    $f-color !important
+  );
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+    border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  &:hover {
+    background-color: $bg-hover !important;
+    color: $f-hover-color !important;
+  }
+}
+.cancel-renewal {
+  @include btn-custom-1(
+    119,
+    45,
+    20,
+    20,
+    #fff,
+    1,
+    $red,
+    15,
+    $fw_Medium,
+    19,
+    $red,
+    $red,
+    #fff
+  );
+}
+.modify-bill {
+  @include btn-custom-1(
+    119,
+    45,
+    20,
+    20,
+    #fff,
+    1,
+    $tb-icon,
+    15,
+    $fw_Medium,
+    19,
+    $tb-icon,
+    $tb-icon,
+    #fff
+  );
+}
+.back-listing {
+  @include btn-custom-1(
+    119,
+    50,
+    22,
+    25,
+    $sidebar-logout-btn,
+    1,
+    $sidebar-logout-btn,
+    15,
+    $fw_Medium,
+    19,
+    #fff,
+    #fff,
+    $sidebar-logout-btn
+  );
+}
+.add-listing {
+  @include btn-custom-1(
+    119,
+    50,
+    22,
+    25,
+    $green,
+    1,
+    $green,
+    15,
+    $fw_Medium,
+    19,
+    #fff,
+    #fff,
+    $green
+  );
+}
+.table-filter-btn {
+  @include btn-custom-1(
+    87,
+    35,
+    0,
+    0,
+    $green,
+    1,
+    $green,
+    15,
+    $fw_Medium,
+    19,
+    #fff,
+    #fff,
+    $green
+  );
+}
+.rangeFilter {
+  height: toRem(42) !important;
+}
+.pay-card {
+  width: 22.5625rem !important;
+  height: 2.8125rem !important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-left: 1.375rem !important;
+  padding-right: 1.375rem !important;
+  background-color: #fff !important;
+  text-decoration: none;
+  vertical-align: middle;
+  cursor: pointer;
+  user-select: none;
+  border: 0.0625rem solid #d4d4d4 !important;
+  border-radius: 0.3125rem;
+  font-size: 0.75rem;
+  font-weight: 600 !important;
+  line-height: 1.375rem;
+  color: #0b162d !important;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+    border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+// Badge
+.eBadge {
+  display: inline-block;
+  max-width: toRem(75);
+  height: toRem(27);
+  @include d-center;
+  outline: toRem(10);
+  @include fontFamily(12, $fw_Medium, 15, $gray);
+  background-color: $tb-badge-bg;
+  white-space: nowrap;
+  vertical-align: baseline;
+  border-radius: 3px;
+}
+.eBadge-2 {
+  display: inline-block;
+  max-width: toRem(95);
+  height: toRem(27);
+  @include d-center;
+  outline: toRem(10);
+  @include fontFamily(12, $fw_Medium, 15, $gray);
+  background-color: $tb-badge-bg;
+  white-space: nowrap;
+  vertical-align: baseline;
+  border-radius: 3px;
+}
+.tb-badge {
+  display: inline-block;
+  padding: toRem(6) toRem(11);
+  outline: toRem(10);
+  @include fontFamily(12, $fw_Medium, 15, #000);
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: baseline;
+  border-radius: toRem(5);
+}
+.dl-badge-red-11 {
+  background-color: rgba($red, 11%) !important;
+  color: $red !important;
+}
+.dl-badge-green-11 {
+  background-color: rgba($green, 11%) !important;
+  color: $green !important;
+}
+
+// Navs
+.eNav-Tabs-custom {
+  border-bottom: none;
+  // border-bottom: toRem(2) solid $d4d4d4;
+  margin-bottom: toRem(30);
+  flex-wrap: nowrap;
+  overflow-x: scroll;
+  gap: toRem(61.21);
+  position: relative;
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: $d4d4d4;
+  }
+  &::-webkit-scrollbar {
+    display: none;
+  }
+  li.nav-item {
+    flex: 0 0 auto;
+  }
+  button.nav-link {
+    @include fontFamily(16, $fw_SemiBold, 46, $black);
+    padding-left: 0;
+    padding-right: 0;
+    padding: 0;
+    position: relative;
+    z-index: 1;
+    transition: all 0.3s;
+    &.active,
+    &:hover {
+      border-color: transparent;
+      background: transparent !important;
+      span {
+        opacity: 1;
+        z-index: 1;
+        background-color: $green;
+      }
+    }
+    span {
+      display: inline-block;
+      width: 100%;
+      height: 2px;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      background-color: $green;
+      z-index: 1;
+      opacity: 0;
+    }
+  }
+}
+// Nearby Navs
+.nearby-tab {
+  padding-top: toRem(6);
+  .nav-item {
+    .nav-link {
+      padding-bottom: toRem(9);
+    }
+  }
+}
+// Nav Features
+.fLists_item {
+  flex: 0 0 auto;
+  width: toRem(150);
+  height: toRem(145);
+  @include d-center;
+  background-color: $light-gray;
+  border-radius: toRem(5);
+  position: relative;
+  .checkMark {
+    position: absolute;
+    top: toRem(6);
+    right: toRem(6);
+    .form-check-input {
+      margin: 0;
+      transform: scale(0.6965);
+      background-color: #fff;
+      border: toRem(1) solid $tb-icon;
+      border-radius: toRem(2);
+      box-shadow: 0 0 0 #00000000;
+      &:checked {
+        background-color: $green;
+        border-color: $green;
+      }
+    }
+  }
+  .iconText {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: toRem(7);
+  }
+  .icon {
+    width: toRem(68);
+    height: toRem(68);
+    border-radius: 50%;
+    background-color: $green;
+    @include d-center;
+    color: #fff;
+    margin: 0 auto;
+  }
+  .text {
+    @include fontFamily(14, $fw_Medium, 18, $black);
+  }
+}
+
+// Radio Button
+.dl-radio {
+  transform: scale(0.6362);
+  vertical-align: middle;
+  margin-top: 0.25em;
+  margin-right: toRem(6);
+  box-shadow: 0 0 0 rgba(0, 0, 0, 0) !important;
+  border: toRem(1) solid $tb-icon;
+  &:checked {
+    background-color: $green;
+    border-color: $green;
+  }
+  ~ label {
+    @include fontFamily(15, $fw_Regular, 24, $black);
+  }
+}
+
+// Expired subscription
+.subscription-expired {
+  background-color: $expire-bg;
+  border: toRem(1) solid $expire-border;
+}
+
+.expired-btn {
+  width: toRem(187);
+  height: toRem(45);
+  border-radius: toRem(5);
+  border: toRem(0) solid $green;
+  background-color: $green !important;
+  @include fontFamily(15, $fw_Medium, 19, #fff);
+  &:hover {
+    background-color: transparent !important;
+    border: toRem(1) solid $green !important;
+    color: $green !important;
+  }
+}
+
+// Radio Wrap
+.dl-gender-wrap {
+  border: toRem(1) solid $d4d4d4;
+  border-radius: toRem(5);
+  @media screen and (max-width: 575px) {
+    flex-direction: column !important;
+  }
+  .gender-item {
+    position: relative;
+    padding: toRem(5) toRem(20);
+    width: toRem(216);
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: toRem(1);
+      height: 100%;
+      background-color: $d4d4d4;
+    }
+    &:first-child {
+      &::after {
+        display: none;
+      }
+    }
+    @media screen and (max-width: 575px) {
+      width: 100%;
+      &::after {
+        bottom: 0;
+        width: 100%;
+        height: toRem(1);
+      }
+    }
+  }
+}
+
+// Search
+.search-input {
+  min-width: toRem(250);
+  height: toRem(42);
+  border-radius: 5px;
+  background-color: #edf2f6;
+  padding: toRem(13) toRem(17);
+  &.search-input-2 {
+    max-width: toRem(250) !important;
+    min-width: inherit;
+  }
+  span {
+    color: #929292;
+  }
+  input {
+    background-color: transparent;
+    border: none;
+    font-size: 12px;
+    line-height: 28px;
+    color: $eColor_Blackish;
+    width: 100%;
+    &:focus {
+      background-color: transparent;
+      color: $eColor_Blackish;
+    }
+  }
+}
+
+// Nearby modal
+.nearby-modal {
+  padding: toRem(25) toRem(30) toRem(30);
+  .rm_header {
+    margin-bottom: toRem(28);
+    .btn-close {
+      width: toRem(13);
+      height: toRem(13);
+      padding: 0;
+      color: $black;
+      opacity: 1;
+      box-shadow: 0 0 0 #00000000;
+    }
+  }
+}
+
+// Map
+.contact-map {
+  position: relative;
+}
+
+.map-frame {
+  height: toRem(225);
+  border-radius: toRem(5);
+  overflow: hidden;
+  #popular_map {
+    width: 100% !important;
+  }
+}
+
+// Photo upload
+.dl-photoUploader {
+  min-height: toRem(218);
+  .image-uploader {
+    border: none;
+    &.has-files {
+      .upload-text {
+        display: flex !important;
+      }
+    }
+  }
+  .upload-text {
+    max-height: toRem(85);
+    background-color: #f5f8fe;
+    border: 1px dashed $d4d4d4;
+    border-radius: 10px;
+    cursor: pointer;
+    svg {
+      path {
+        fill: #9cb0d9;
+      }
+    }
+    span {
+      display: inline-block;
+      padding-top: 10px;
+      @include fontFamily(12, $fw_Medium, 15, $black);
+    }
+    @media screen and (max-width: 576px) {
+      padding: 0 toRem(10);
+      text-align: center;
+    }
+  }
+  .uploaded {
+    position: relative;
+    top: toRem(100);
+    padding: toRem(5) 0 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: toRem(10);
+    .uploaded-image {
+      width: toRem(40);
+      height: toRem(40);
+      padding: 0;
+      margin: 0;
+      img {
+        border-radius: toRem(5);
+      }
+      .delete-image {
+        top: -5px;
+        right: -4px;
+        display: flex !important;
+        justify-content: center;
+        align-items: center;
+        width: toRem(20);
+        height: toRem(20);
+        border-radius: 50%;
+        background-color: #fff !important;
+        padding: 0 !important;
+        box-shadow: 0 toRem(3) toRem(6) #00000016;
+        svg {
+          width: toRem(7);
+          path {
+            fill: $red;
+          }
+        }
+      }
+    }
+  }
+}
+.previous-media {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  &:has(li.uploaded-image) {
+    margin-bottom: 20px;
+  }
+  &:not(:has(li.uploaded-image)) {
+    .uploaded-image {
+      display: none;
+    }
+  }
+  .uploaded-image {
+    position: relative;
+    width: toRem(60);
+    height: toRem(60);
+    img {
+      border-radius: toRem(5);
+      height: 100%;
+      border: toRem(1) solid #c6c6c6;
+    }
+    .pre-delete-image {
+      position: absolute;
+      content: "";
+      top: -5px;
+      right: -4px;
+      display: flex !important;
+      justify-content: center;
+      align-items: center;
+      width: toRem(20);
+      height: toRem(20);
+      border: none;
+      border-radius: 50%;
+      background-color: #fff !important;
+      padding: 0 !important;
+      box-shadow: 0 toRem(3) toRem(6) #00000016;
+      svg {
+        width: toRem(10);
+        path {
+          fill: $red;
+        }
+      }
+    }
+  }
+}
+
+// dateRange
+.dateRange-filter {
+  width: toRem(386);
+  .eForm-control {
+    max-width: toRem(286);
+    height: toRem(42) !important;
+  }
+}
+
+// Payment details => sidebar
+.paymentDetails-wrap {
+  > .row {
+    row-gap: 30px;
+  }
+}
+.dl-plan-coupon {
+  max-width: toRem(300);
+  background-color: #fff;
+  border-radius: toRem(5);
+  @media screen and (max-width: 575px) {
+    max-width: 100%;
+  }
+  // Dropdown
+  .plan-select {
+    .logo {
+      flex: 0 0 toRem(40);
+    }
+    // Select
+    .eForm-select {
+      ~ .select2-container--default {
+        width: toRem(186) !important;
+        margin-top: toRem(5);
+        .select2-selection--single {
+          border: none;
+          min-height: toRem(24) !important;
+          height: toRem(24) !important;
+          .select2-selection__rendered {
+            padding: 0 !important;
+            @include fontFamily(15, $fw_Medium, 24, $black);
+          }
+          .select2-selection__arrow {
+            right: 0 !important;
+            height: toRem(24) !important;
+          }
+        }
+      }
+    }
+  }
+  // Cupon
+  .coupon {
+    padding: toRem(8) toRem(30);
+    border-top: toRem(1) solid $d4d4d4;
+    border-bottom: toRem(1) solid $d4d4d4;
+    margin-bottom: toRem(20);
+    a {
+      @include fontFamily(15, $fw_Medium, 24, $green);
+    }
+  }
+  // Sub total
+  .sub-total {
+    padding: 0 toRem(30);
+    li {
+      @include fontFamily(15, $fw_SemiBold, 24, $black);
+      padding-bottom: toRem(15);
+    }
+  }
+  // total
+  .total-plan {
+    @include fontFamily(15, $fw_SemiBold, 24, #fff);
+    border-radius: 0 0 toRem(5) toRem(5);
+  }
+}
+
+// SEO input
+.seo-input {
+  ~ .select2-container {
+    width: 100% !important;
+    box-shadow: rgb(0 170 108 / 14%) 0rem 0rem 0.9375rem;
+    &.select2-container--focus .select2-selection--multiple {
+      border: 1px solid $green;
+    }
+    .select2-selection--multiple {
+      min-height: toRem(55);
+      .select2-selection__rendered {
+        &:has(li) {
+          display: inline-block;
+        }
+        margin-top: toRem(7);
+        .select2-selection__choice {
+          background-color: #e3e4ea;
+          border-radius: toRem(14);
+          margin-left: toRem(14);
+          .select2-selection__choice__remove {
+            @include fontFamily(14, $fw_Medium, 22, $black);
+            margin-top: toRem(3);
+          }
+          .select2-selection__choice__display {
+            @include fontFamily(14, $fw_Medium, 22, $black);
+            padding-right: 0;
+            &::after {
+              display: none;
+            }
+          }
+        }
+      }
+    }
+  }
+  ~ .select2-container--default
+    .select2-search--inline
+    .select2-search__field:placeholder-shown {
+    @include fontFamily(15, $fw_Regular, 22, $gray);
+  }
+}
+
+// Listing Dropdown
+.selectWrap {
+  margin-bottom: toRem(40);
+  .eForm-select ~ .select2-container {
+    width: toRem(450) !important;
+  }
+}
+
+// Message
+@import "dl-message";

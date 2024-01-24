@@ -1,0 +1,193 @@
+.eTable {
+  font-size: toRem(15) !important;
+  font-weight: $fw_SemiBold !important;
+  color: $black !important;
+  margin-bottom: 0;
+  > :not(caption) > * > * {
+    padding: 11px 16px !important;
+    border-bottom-color: $tb-color !important;
+    border-top: 0px solid #000;
+    border-bottom: 0px solid #000 !important;
+    &:first-child {
+      padding-left: 0px !important;
+    }
+  }
+  > :not(:first-child) {
+    border-top: 1px solid $tb-color;
+  }
+  &.table-borderless {
+    > :not(:first-child) {
+      border-top: none;
+    }
+  }
+  .table-light {
+    --bs-table-bg: $table-light-bg;
+  }
+  thead {
+    tr {
+      th {
+        font-size: toRem(15);
+        font-weight: $fw_SemiBold;
+        color: $black;
+        border-bottom: toRem(1.1) solid $tb-color !important;
+      }
+    }
+  }
+  tbody {
+    tr {
+      font-size: toRem(15) !important;
+      font-weight: $fw_Regular !important;
+      line-height: toRem(15) !important;
+      color: $tb-text-color !important;
+      th {
+        font-size: 12px !important;
+        font-weight: $fw_Regular !important;
+      }
+    }
+  }
+  &.table-hover > tbody > tr:hover > * {
+    background-color: $table-light-bg;
+    color: $eColor_Blueish;
+  }
+  &.table-dark {
+    --bs-table-bg: #181c32;
+    --bs-table-hover-bg: #181c3215;
+    --bs-table-hover-color: #181c32;
+    color: #fff !important;
+    border-color: #4c5067 !important;
+    > :not(caption) > * > * {
+      border-bottom-color: #4c5067 !important;
+    }
+    &.table-hover > tbody > tr:hover > * {
+      background-color: #181c3290;
+      color: #fff;
+    }
+    &.table-striped > tbody > tr:nth-of-type(odd) > * {
+      --bs-table-accent-bg: #181c3290 !important;
+      color: #fff;
+    }
+  }
+  &.table-striped > tbody > tr:nth-of-type(odd) > * {
+    background-color: $table-light-bg;
+    color: $eColor_Blueish;
+  }
+}
+// Table => Padding 0
+.table-p0 {
+  tbody {
+    tr {
+      &:first-child {
+        td {
+          padding-top: 0 !important;
+        }
+      }
+      &:last-child {
+        td {
+          padding-bottom: 0 !important;
+        }
+      }
+    }
+  }
+}
+// Table => Padding top 0
+.table-pt0 {
+  thead {
+    tr {
+      th {
+        padding-top: 0 !important;
+      }
+    }
+  }
+}
+// Table => Padding bottom 0
+.table-pb0 {
+  tbody {
+    tr {
+      &:last-child {
+        td {
+          padding-bottom: 0 !important;
+        }
+      }
+    }
+  }
+}
+// For Admin table
+.eTable-2 {
+  > :not(caption) > {
+    * > {
+      * {
+        border-bottom: 1px dashed $tb-color;
+        padding: 20px 16px !important;
+        vertical-align: middle;
+        &:first-child {
+          padding-left: 0px !important;
+        }
+      }
+    }
+  }
+  > :not(:first-child) {
+    border-top: toRem(1.2) solid $tb-color !important;
+  }
+  tbody {
+    tr {
+      &:not(:last-child) {
+        border-bottom: toRem(1) dashed $tb-color;
+      }
+    }
+  }
+}
+.eTable-2 > :not(caption) > * > *:last-child {
+  width: 107px;
+  border-bottom-color: transparent !important;
+  text-align: center;
+}
+// Dl Table
+.last_t_cell > :not(caption) > * > *:last-child {
+  text-align: right;
+  padding-right: 0 !important;
+}
+.last_t_cell > :not(caption) > * > *:nth-child(5) {
+  text-align: center;
+}
+
+.table-icon > :not(caption) > * > *:last-child {
+  width: 208px;
+  text-align: right !important;
+  padding-right: toRem(0) !important;
+}
+
+// Table btn
+.table-action-btn {
+  display: inline-block;
+  padding: 6px 10px;
+  line-height: 1;
+  border-radius: 5px;
+  background-color: $eColor_Whiteish;
+  font-size: 12px;
+  font-weight: $fw_Regular;
+  color: $eColor_Blueish;
+  &:hover {
+    color: $eColor_Blueish;
+  }
+}
+
+// Invoice Table
+.eTable-2.tbody-border {
+  thead {
+    tr {
+      th {
+        font-size: 16px;
+        font-weight: $fw_SemiBold;
+        color: $eColor_Blueish;
+      }
+    }
+  }
+  tbody {
+    tr {
+      border-bottom: 1.1px solid $eColor_Seperate !important;
+      &:first-child {
+        border-bottom: 1.1px solid transparent !important;
+      }
+    }
+  }
+}

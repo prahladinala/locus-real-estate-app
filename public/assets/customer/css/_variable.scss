@@ -1,0 +1,481 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+$body-font: "Inter", sans-serif;
+
+// Color
+$eColor_Blue: #00a3ff;
+$eColor_Blue_bg: #00a3ff;
+$eColor_Blue_border: #00a3ff;
+$eColor_Blueish: #181c32;
+$eColor_Blueish_bg: #b0dff9;
+$eColor_Blueish_border: #7bc0e6;
+$eColor_Green: #50cd89;
+$eColor_Greenish_bg: #aae1cb;
+$eColor_Greenish_border: #83d4b3;
+$eColor_Orange: #ffc700;
+$eColor_Red: #f1416c;
+$eColor_Redish_bg: #fec0bf;
+$eColor_Redish_border: #f29a99;
+$eColor_Yellow: #ffc700;
+$eColor_Yellowish_bg: #ffe5ba;
+$eColor_Yellowish_border: #ebc27d;
+$eColor_Purple: #7239ea;
+$eColor_Purpleish_bg: #b9bbe5;
+$eColor_Purpleish_border: #8f92d1;
+$eColor_Blackish: #797c8b;
+$eColor_Blackish_bg: #cacfd4;
+$eColor_Blackish_border: #abafb2;
+$eColor_Seperate: #dedede;
+$eColor_Whiteish: #e3e4ea;
+$eColor_Whiteish_bg: #e3e4ea;
+$eColor_Whiteish_border: #cacfd4;
+$eColor_Darkish: #cacfd4;
+$eColor_Body: #f6f6f9;
+$primary-dark: #0079be;
+$success: #34c38f;
+$info: #556ee6;
+$warning: #f1b44c;
+$dnager: #f65e5e;
+$soft_blue: #daf1fe;
+$soft_blue_text: $eColor_Blue;
+$soft_success: #d1fee5;
+$soft_success_text: $eColor_Green;
+$soft_info: #eae3f9;
+$soft_info_text: $eColor_Purple;
+$soft_warning: #fcf5db;
+$soft_warning_text: $eColor_Orange;
+$soft_danger: #ffe9ef;
+$soft_danger_text: $eColor_Red;
+$soft_dark: #d6d6d6;
+$soft_dark_text: $eColor_Blueish;
+$table-light-bg: $eColor_Whiteish;
+$present: $eColor_Green;
+$absent: #f3416c;
+$dropdown_bg: #edf2f6;
+$unpaid_bg: #ffe1e8;
+
+// Font weight
+$fw_Thin: 100;
+$fw_ExtraLight: 200;
+$fw_Light: 300;
+$fw_Regular: 400;
+$fw_Medium: 500;
+$fw_SemiBold: 600;
+$fw_Bold: 700;
+$fw_ExtraBold: 800;
+$fw_Black: 900;
+
+// Heights
+$h-12: 12px;
+$h-16: 16px;
+$h-20: 20px;
+
+@function toRem($value) {
+  $remValue: ($value / 16) + rem;
+  @return $remValue;
+}
+@mixin bgBorder($bgColor, $borderColor, $borderRadius) {
+  background-color: $bgColor;
+  border: 1px solid $borderColor;
+  border-radius: $borderRadius;
+}
+@mixin fontFamily($fontSize, $fontWeight, $lineHeight, $textColor) {
+  font-size: toRem($fontSize);
+  font-weight: $fontWeight;
+  line-height: toRem($lineHeight);
+  color: $textColor;
+}
+@mixin widthHeight($maxWidth, $height) {
+  max-width: $maxWidth;
+  height: toRem($height);
+}
+@mixin boxShadow($x, $y, $blur, $color) {
+  box-shadow: toRem($x) toRem($y) toRem($blur) $color;
+}
+@mixin d-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+// MY THEME COLORS
+$light-blue: #4620d5;
+$secondary: #69696a;
+$brand-blue: #d9f2e9;
+$white: #fff;
+$white-light: #dfd9f6;
+$brand-mute: rgba(146, 146, 146, 0.12);
+$headings-color: #0b162d;
+$light-gray: #f2f2f2;
+$gray: #69696a;
+$brand-blue: #282d38;
+
+// $brand-blue: #282d38;
+$text-muted: #949494;
+$border-color: #e6e6e6;
+// $body-bg: #f5f5f5;
+// $primary: #00aa6c;
+$primary: #007bff;
+// $success: #31a24c;
+$dark: #0b162d;
+$black: #0b162d;
+$red: #ef181b;
+$d4d4d4: #d4d4d4;
+$C1C1C1: #c1c1c1;
+
+// Colors
+// $green: #00aa6c;
+$green: #007bff;
+$delete: $red;
+$delete2: #ef255c;
+$disable: $red;
+$tb-color: $d4d4d4;
+$pagi-border-color: $C1C1C1;
+$tb-text-color: #69696a;
+$tb-icon: #929292;
+$tb-icon-fill: #e3e4ea;
+$tb-modal-backdrop: #c0c6d2;
+$tb-badge-bg: #ebeef4;
+$sidebar-text-color: #929292;
+$sidebar-logout-btn: #2e3d5c;
+$price-badge-color: #606e8f;
+$nva-notify: #e7ebf2;
+$expire-bg: #fcf4f6;
+$expire-border: #ffb2c7;
+
+// Color with opacity
+$price-mute-text: #ffffff22;
+
+// Background
+.bg-white {
+  background-color: #fff;
+}
+.bg-green {
+  background-color: $green !important;
+}
+.bg-delete {
+  background-color: $delete;
+}
+.bg-delete2 {
+  background-color: $delete2;
+}
+.bg-disable {
+  background-color: $disable;
+}
+
+.text-green {
+  color: $green !important;
+}
+.text-delete {
+  color: $delete;
+}
+.text-dl-black {
+  color: $black;
+}
+
+.tb-border-color {
+  border-color: $tb-color;
+}
+.pagi-border-color {
+  border-color: $pagi-border-color;
+}
+
+// Width
+.w-115 {
+  max-width: toRem(115);
+}
+.w-119 {
+  width: toRem(119) !important;
+}
+.max-w-181 {
+  max-width: toRem(181) !important;
+  @media screen and (max-width: 576px) {
+    width: 100%;
+  }
+}
+// Height
+.h-35 {
+  height: toRem(35);
+}
+.h-40 {
+  height: toRem(40);
+}
+.h-45 {
+  height: toRem(45);
+}
+.h-50 {
+  height: toRem(50);
+}
+// Height-Width
+.wh-40 {
+  width: toRem(40);
+  height: toRem(40);
+}
+.wh-110 {
+  width: toRem(110);
+  height: toRem(110);
+}
+// Gap
+.g-8 {
+  gap: toRem(8);
+}
+.g-10 {
+  gap: toRem(10);
+}
+.g-12 {
+  gap: toRem(12);
+}
+.g-13 {
+  gap: toRem(13);
+}
+.g-14 {
+  gap: toRem(14);
+}
+.g-15 {
+  gap: toRem(15);
+}
+.g-16 {
+  gap: toRem(16);
+}
+.g-18 {
+  gap: toRem(18);
+}
+.g-20 {
+  gap: toRem(20);
+}
+.g-22 {
+  gap: toRem(22);
+}
+// Row gap
+.rg-8 {
+  row-gap: toRem(8);
+}
+.rg-12 {
+  row-gap: toRem(12);
+}
+.rg-16 {
+  row-gap: toRem(16);
+}
+.rg-18 {
+  row-gap: toRem(18);
+}
+.rg-22 {
+  row-gap: toRem(22);
+}
+.rg-30 {
+  row-gap: toRem(30);
+}
+// Column gap
+.cg-10 {
+  column-gap: toRem(10);
+}
+.cg-12 {
+  column-gap: toRem(12);
+}
+.cg-16 {
+  column-gap: toRem(16);
+}
+.cg-18 {
+  column-gap: toRem(18);
+}
+.cg-22 {
+  column-gap: toRem(22);
+}
+// Padding
+.pb-8 {
+  padding-bottom: toRem(8);
+}
+.pb-10 {
+  padding-bottom: toRem(10);
+}
+.pb-16 {
+  padding-bottom: toRem(16);
+}
+.pb-17 {
+  padding-bottom: toRem(17);
+}
+.pb-20 {
+  padding-bottom: toRem(20);
+}
+.pb-22 {
+  padding-bottom: toRem(22);
+}
+.pb-25 {
+  padding-bottom: toRem(25);
+}
+.pb-30 {
+  padding-bottom: toRem(30);
+}
+.pb-40 {
+  padding-bottom: toRem(40);
+}
+.pt-10 {
+  padding-top: toRem(10);
+}
+.pt-11 {
+  padding-top: toRem(11);
+}
+.pt-15 {
+  padding-top: toRem(15);
+}
+.pt-22 {
+  padding-top: toRem(22);
+}
+.pt-26 {
+  padding-top: toRem(26);
+}
+.pt-30 {
+  padding-top: toRem(30);
+}
+.pt-40 {
+  padding-top: toRem(40);
+}
+.pr-20 {
+  padding-right: toRem(20);
+}
+.pr-30 {
+  padding-right: toRem(30);
+}
+.pl-20 {
+  padding-left: toRem(20);
+}
+.pl-30 {
+  padding-left: toRem(30);
+}
+.px-20 {
+  padding-right: toRem(20);
+  padding-left: toRem(20);
+}
+.py-20 {
+  padding-top: toRem(20);
+  padding-bottom: toRem(20);
+}
+.px-30 {
+  padding-right: toRem(30);
+  padding-left: toRem(30);
+}
+.py-13 {
+  padding-top: toRem(13);
+  padding-bottom: toRem(13);
+}
+.py-30 {
+  padding-top: toRem(30);
+  padding-bottom: toRem(30);
+}
+.media-pt-28 {
+  padding-top: toRem(28);
+  @media screen and (max-width: 576px) {
+    padding-top: 0;
+  }
+}
+// Margin
+.mb-16 {
+  margin-bottom: toRem(16);
+}
+.mb-20 {
+  margin-bottom: toRem(20);
+}
+.mb-22 {
+  margin-bottom: toRem(22);
+}
+.mb-25 {
+  margin-bottom: toRem(25);
+}
+.mb-30 {
+  margin-bottom: toRem(30);
+}
+.mt-26 {
+  margin-top: toRem(26);
+}
+.mt-30 {
+  margin-top: toRem(30);
+}
+.ml-20 {
+  margin-left: toRem(20);
+}
+// Box Shadow
+.boxShadow-06 {
+  @include boxShadow(0, 10, 30, rgb(0 0 0 / 6%));
+}
+.boxShadow-g-25 {
+  @include boxShadow(0, 0, 15, #00aa6c25);
+}
+
+// Border
+.bd-b-1 {
+  border-bottom: toRem(1) solid $d4d4d4;
+}
+.bd-t-1 {
+  border-top: toRem(1) solid $d4d4d4;
+}
+.border-round {
+  border: toRem(1) solid $d4d4d4;
+  border-radius: 50%;
+}
+// Border Radius
+.bd-r-5 {
+  border-radius: toRem(5);
+}
+
+// Font size
+.fz-12-r-gray {
+  @include fontFamily(12, $fw_Regular, 22, #707070);
+}
+.fz-12-m-blackish {
+  @include fontFamily(12, $fw_Medium, 18, #797c8b);
+}
+.fz-13-m-grayish {
+  @include fontFamily(13, $fw_Medium, 16, #929292);
+}
+.fz-14-r-gray {
+  @include fontFamily(14, $fw_Regular, 17, $gray);
+}
+.fz-14-sb-black {
+  @include fontFamily(14, $fw_SemiBold, 17, $black);
+}
+.fz-15-r-gray {
+  @include fontFamily(15, $fw_Regular, 24, $gray);
+}
+.fz-15-m-black {
+  @include fontFamily(15, $fw_Medium, 15, $black);
+}
+.fz-15-sb-black {
+  @include fontFamily(15, $fw_SemiBold, 15, $black);
+}
+.fz-16-m-gray {
+  @include fontFamily(16, $fw_Medium, 20, $gray);
+}
+.fz-16-sb-black {
+  @include fontFamily(16, $fw_SemiBold, 25, $black);
+}
+.fz-17-sb-black {
+  @include fontFamily(17, $fw_SemiBold, 20, $black);
+}
+.fz-18-m-black {
+  @include fontFamily(18, $fw_Medium, 30, $black);
+}
+.fz-18-sb-black {
+  @include fontFamily(18, $fw_SemiBold, 30, $black);
+}
+.fz-20-sb-black {
+  @include fontFamily(20, $fw_SemiBold, 30, $black);
+}
+.fz-24-sb-black {
+  @include fontFamily(24, $fw_SemiBold, 29, $black);
+}
+.fz-24-b-black {
+  @include fontFamily(24, $fw_Bold, 29, $black);
+}
+.fz-34-sb-white {
+  @include fontFamily(34, $fw_SemiBold, 41, #fff);
+  @media screen and (max-width: 767px) {
+    font-size: toRem(30);
+  }
+}
+// Font Weight
+.fw-medium {
+  font-weight: $fw_Medium !important;
+}
+.fw-SemiBold {
+  font-weight: $fw_SemiBold !important;
+}

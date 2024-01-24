@@ -1,0 +1,157 @@
+.footer {
+  background-color: $brand-blue;
+  padding-top: 100px;
+
+  .footer-top {
+    padding: 0 0 100px;
+  }
+
+  .footer-widget {
+    .widget-title {
+      color: $white;
+      font-size: 24px;
+      margin-bottom: 30px;
+    }
+
+    ul {
+      @include list-clear;
+
+      li {
+        line-height: 34px;
+
+        a {
+          color: #c6c6c8;
+
+          &:hover {
+            color: $primary;
+          }
+        }
+      }
+    }
+
+    p {
+      color: #c6c6c8;
+    }
+
+    .widget-inner {
+      span {
+        display: block;
+        line-height: 30px;
+
+        a {
+          color: #c6c6c8;
+        }
+      }
+
+      select {
+        background-color: $brand-blue;
+        color: $white;
+        padding: 7px 10px;
+        border: 0 none;
+        box-shadow: none;
+      }
+    }
+  }
+}
+
+.social-share {
+  a {
+    width: 30px;
+    height: 30px;
+    display: inline-table;
+    background-color: #515660;
+    text-align: center;
+    @include border-radius(50%);
+    font-size: 12px;
+    margin-right: 10px;
+
+    i {
+      display: table-cell;
+      vertical-align: middle;
+    }
+
+    &:hover {
+      background-color: $primary;
+      color: $white;
+    }
+  }
+}
+
+.footer-widget {
+  .social-share {
+    a {
+      font-size: 13px;
+      color: #bec3cc;
+    }
+  }
+}
+
+.footer-copyrights {
+  border-top: 1px solid #424242;
+  padding: 30px 0;
+
+  p {
+    text-align: center;
+    margin-top: 15px;
+    font-weight: 300;
+    color: $white;
+  }
+}
+
+ul.footer-flag > li {
+  display: inline-block;
+
+  .nice-select {
+    background-color: transparent;
+    border: 0 none;
+    color: $white;
+
+    &::after {
+      top: 37%;
+      border-color: $white;
+    }
+    .option {
+      color: $secondary;
+    }
+  }
+  &:first-child .nice-select {
+    width: 80px;
+  }
+}
+
+.footer-menu {
+  text-align: center;
+
+  ul {
+    @include list-clear;
+
+    li {
+      display: inline-block;
+
+      a {
+        @include heading-6;
+        font-weight: 500;
+        color: $white;
+        padding: 15px;
+        text-decoration: none;
+        @extend .overly;
+
+        &::before {
+          height: 22px;
+          width: 2px;
+          top: 50%;
+          transform: translateY(-50%);
+          background-color: $white;
+        }
+      }
+
+      &:hover a {
+        color: $primary;
+      }
+
+      &:first-child a::before {
+        display: none;
+      }
+    }
+  }
+}

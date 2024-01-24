@@ -1,0 +1,60 @@
+.sign-wrap {
+    max-width: 500px;
+    background: #fff;
+    border-radius: 20px;
+    padding: 30px;
+}
+
+.pr-5 {
+    padding-right: 25px !important;
+}
+
+.form-sign .eForm-control {
+    padding: 14px 24px;
+    border-radius: 30px;
+    height: auto;
+    font-size: 15px;
+}
+
+.form-sign .eForm-control::placeholder {
+    font-size: 15px;
+}
+
+.form-sign .sign-btn-main {
+    padding: 14px 24px;
+    border-radius: 15px;
+    height: auto;
+}
+
+.form-sign .pass-group {
+    position: relative;
+}
+
+.form-sign .forgetPass {
+    text-align: left;
+}
+
+.pass-two {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.forgetPass input {
+    width: auto;
+    margin-right: 12px;
+}
+
+.subtitle-form2 a {
+    font-weight: 600;
+    font-size: 18px;
+}
+
+.pass-icon {
+    position: absolute;
+    top: 59px;
+    right: 20px;
+}
+
+.pass-icon svg {
+    color: #A09EAB;
+}

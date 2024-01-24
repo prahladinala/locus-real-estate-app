@@ -1,0 +1,218 @@
+.single-date label {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  text-align: center;
+  background-color: #fff;
+  border: 1px solid #d1d4dc;
+  border-radius: 3px;
+  padding: 10px 0;
+  width: 62px;
+  cursor: pointer;
+  margin: auto;
+}
+.single-date input {
+  display: none;
+}
+.single-date label.active {
+  background-color: $green;
+  border-color: $green;
+  box-shadow: 5px 3px 6px rgba(0, 0, 0, 0.08);
+}
+.single-date label.active p,
+.single-date label.active span {
+  color: #fff !important;
+}
+.single-date p {
+  font-size: 15px;
+  color: #0b162d;
+}
+.single-date span {
+  font-size: 17px;
+  color: #0b162d;
+  padding: 8px 0;
+  position: relative;
+}
+.single-date span:before,
+.single-date span:after {
+  position: absolute;
+  content: "";
+  left: 0;
+  width: 55%;
+  height: 1px;
+  background-color: #d1d4dc;
+  right: 0;
+  margin: auto;
+}
+.single-date span:after {
+  top: 4px;
+}
+.single-date span:before {
+  bottom: 4px;
+}
+.select-date-slide {
+  position: relative;
+}
+.select-date-slide .slick-prev::before,
+.select-date-slide .slick-next::before {
+  color: $black;
+}
+// .select-date-slide .slick-list.draggable {
+//   margin: 0 9px;
+// }
+.select-date-slide .slick-prev::before {
+  content: "➜";
+  color: $black;
+  opacity: 1;
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+}
+.select-date-slide .slick-prev {
+  transform: rotate(180deg) !important;
+  background-color: #fff;
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
+  height: 30px;
+  width: 30px;
+  position: absolute;
+  left: -5px;
+  z-index: 999;
+  border-radius: 50%;
+  top: 37%;
+  @media screen and (max-width: 991px) {
+    left: 0;
+  }
+}
+.select-date-slide .slick-next {
+  right: -16px;
+  @media screen and (max-width: 991px) {
+    right: -10px;
+  }
+}
+.select-date-slide .slick-next::before {
+  content: "➜";
+  background-color: #fff;
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
+  height: 30px;
+  width: 30px;
+  position: absolute;
+  right: 10px;
+  z-index: 999;
+  border-radius: 50%;
+  color: #282d38;
+  line-height: 30px;
+  opacity: 1;
+  top: -20%;
+  transform: rotate(180deg);
+}
+.select-date-slide .slick-next:hover::before {
+  background-color: $green !important;
+  color: #fff;
+}
+.select-date-slide .slick-prev:hover::before {
+  color: #fff !important;
+}
+.select-date-slide .slick-prev:hover {
+  background-color: $green !important;
+}
+
+/******************* Preloader Start ************************/
+.preloder{
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-pack: center;
+	    -ms-flex-pack: center;
+	        justify-content: center;
+	-webkit-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
+	text-align:center;
+	z-index: 9999;
+	background-color: #fff;
+}
+.sky-cube{
+	height: 50px;
+	width: 50px;
+}
+.cube{
+	width:33%;
+	height: 33%;
+	background-color: #00aa6c !important;
+	float: left;
+	-webkit-animation: sky-man 1.3s  infinite ease-in-out;
+	        animation: sky-man 1.3s  infinite ease-in-out;
+}
+.sky-cube .cube-1{
+	-webkit-animation-delay: 0.2s;
+	        animation-delay: 0.2s;
+}
+.sky-cube .cube-2{
+	-webkit-animation-delay: 0.3s;
+	        animation-delay: 0.3s;
+}
+.sky-cube .cube-3{
+	-webkit-animation-delay: 0.4s;
+	        animation-delay: 0.4s;
+}
+.sky-cube .cube-4{
+	-webkit-animation-delay: 0.1s;
+	        animation-delay: 0.1s;
+}
+.sky-cube .cube-5{
+	-webkit-animation-delay: 0.2s;
+	        animation-delay: 0.2s;
+}
+.sky-cube .cube-6{
+	-webkit-animation-delay: 0.3s;
+	        animation-delay: 0.3s;
+}
+.sky-cube .cube-7{
+	-webkit-animation-delay: 0s;
+	        animation-delay: 0s;
+}
+.sky-cube .cube-8{
+	-webkit-animation-delay: 0.1s;
+	        animation-delay: 0.1s;
+}
+.sky-cube .cube-9{
+	-webkit-animation-delay: 0.2s;
+	        animation-delay: 0.2s;
+}
+@-webkit-keyframes sky-man{
+	0%,
+	70%,
+	100%{
+		-webkit-transform: scale3D(1,1,1);
+		        transform: scale3D(1,1,1)
+	}
+	35%{
+		-webkit-transform: scale3D(0,0,1);
+		        transform: scale3D(0,0,1);
+	}
+}
+@keyframes sky-man{
+	0%,
+	70%,
+	100%{
+		-webkit-transform: scale3D(1,1,1);
+		        transform: scale3D(1,1,1)
+	}
+	35%{
+		-webkit-transform: scale3D(0,0,1);
+		        transform: scale3D(0,0,1);
+	}
+}
+/************************* Preloader End ********************/

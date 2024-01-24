@@ -1,0 +1,26 @@
+.dl-btn-1 {
+  @include d-center;
+  width: 130px;
+  height: 45px;
+  background-color: var(--green);
+  border: 1px solid var(--green);
+  border-radius: 3px;
+  @include fontFamily(15, $fw_SemiBold, 18, #fff);
+  &:hover {
+    background-color: transparent;
+    color: var(--green) !important;
+  }
+}
+.dl-btn-outline-1 {
+  @include d-center;
+  width: 130px;
+  height: 45px;
+  background-color: transparent;
+  border: 1px solid var(--green);
+  border-radius: 3px;
+  @include fontFamily(15, $fw_SemiBold, 18, var(--green));
+  &:hover {
+    background-color: var(--green);
+    color: #fff !important;
+  }
+}

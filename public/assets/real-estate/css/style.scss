@@ -1,0 +1,63 @@
+@import "variable";
+@import "dl-media-quaries";
+@import "dl-mixins";
+@import "dl-typography";
+@import "dl-theme";
+
+@import "backgrounds";
+@import "widths";
+@import "heights";
+@import "top_header";
+
+body {
+  background-color: #fff;
+}
+.container {
+  max-width: 1200px;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+a,
+ul,
+ol,
+li,
+button,
+label,
+div,
+p,
+span {
+  margin: 0;
+  padding: 0;
+}
+ul,
+ol {
+  list-style: none;
+}
+img {
+  max-width: 100%;
+}
+.row {
+  row-gap: toRem(30);
+}
+
+[data-background] {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+@import "dl-header";
+@import "dl-footer";
+@import "dl-agent-details";
+@import "dl-buttons";
+@import "dl-badge";
+@import "single-details";
+@import "dl-pagination";
+@import "dl-home-01";
+@import "dl-faq";
+@import "dl-blog";
+@import "dl-single-date";

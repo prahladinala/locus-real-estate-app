@@ -1,0 +1,649 @@
+@media all and (max-width:1080px){
+    .agent-pro-item{
+        width: 100%;
+    }
+    .rel-modal .modal-header {
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+    }
+    .g-rate {
+        margin-bottom: 14px;
+       -ms-flex-wrap: wrap;
+           flex-wrap: wrap;
+    }
+    .g-apart{
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+    }
+    .g-apart .aprt-info {
+        margin: 0 45px 10px 0;
+        
+    }
+    .gallary-modal .btn-close {
+        top: -60px;
+    }
+    .more-slide {
+        max-width: 161px;
+    }
+}
+@media all and (min-width:992px){
+    .primary-menu{
+        display: -webkit-box !important;
+        display: -ms-flexbox !important;
+        display: flex !important;
+    }
+    .toggle-icon,.crose-icon{
+        display: none !important;
+    }
+    .tab-crose, .tablet-search{
+        display: none !important;
+    }
+}
+@media all and (max-width:991px){
+    .toggle-icon {
+        display: block;
+    }
+    .menu-items{
+       position: absolute;
+       top: 0;
+       left: -550px;
+       max-width: 300px;
+       height: 100vh;
+       background-color: #FFFFFF;
+	   box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
+       padding: 20px;
+       z-index: 999;
+       -webkit-transition: .5s;
+       transition: .5s;
+    }
+    .menu-items.open{
+        left: 0;
+    }
+    .menu-items .primary-menu{
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+        -webkit-box-pack: start;
+            -ms-flex-pack: start;
+                justify-content: flex-start;
+                -webkit-box-align: start;
+                    -ms-flex-align: start;
+                            -ms-grid-row-align: flex-start;
+                        align-items: flex-start;
+
+    }
+    .menu-items .primary-menu li{
+        padding: 10px  0;
+    }
+    .header-menu {
+        -webkit-box-pack: start;
+            -ms-flex-pack: start;
+                justify-content: flex-start;
+    }
+    .header-menu .primary-menu li a{
+        margin: 0;
+    }
+    /* Bannar Area */
+    .bannar-area {
+        padding: 120px 0 80px 0;
+    }
+    .inner-col {
+        margin: 0;
+    }
+    .all-post-items {
+        -ms-grid-columns: (1fr)[2];
+            grid-template-columns: repeat(2,1fr);
+    }
+    .bannar-search button {
+        margin-left: 0px;
+    }
+    .single-search .form-select {
+        width: 100%;
+    }
+    .ban-col::before {
+       display: none;
+    }
+    .res-mb-20{
+        margin-bottom: 20px;
+    }
+    .bannar-search button {
+       width: 100%;
+    }
+    .city-card-group .owl-nav .owl-next {
+        right: -35px;
+    }
+    .city-card-group .owl-nav .owl-prev {
+        left: 28px;
+    }
+    .pagination-items {
+        margin-bottom: 40px;
+        margin-top: 20px;
+    }
+    /* Real Estate  */
+
+    .sidebar-content.active{
+        display: block;
+    }
+    .tab-content > .active {
+     	margin-bottom: 120px;
+   }
+    .sidebar-area{
+        padding-bottom: 0;
+    }
+    .product-map ,
+    .product-grid-sidebar{
+        margin-bottom: 20px;
+    }
+    .sidebar-items:last-child{
+        padding-bottom: 30px;
+    }
+    .product-map iframe {
+        height: 350px;
+    }
+    .product-grid-post {
+        margin-top: 40px;
+        margin-bottom: 0px;
+    }
+    .property-listing-area {
+        margin-bottom: 20px;
+    }
+    .no-data-img {
+        padding: 30px 0 40px 0;
+    }
+    .agent-img{
+        margin-bottom: 30px;
+    }
+    .agent-img img{
+        max-width: 380px;
+    }
+    .agent-pro-item{
+        margin-bottom: 20px;
+    }
+    .more-slide {
+        max-width: 210px;
+    }
+    .rel-side-wiget {
+        max-width: 600px;
+        margin: auto;
+    }
+    .map-item {
+        margin-bottom: 20px;
+    }
+    /* New Css */
+    .global_header .primary-menu li a{
+        color: #111D31 !important;
+    }
+    .global_header .primary-menu li a:hover{
+        color: #fff !important;
+    }
+    .single-search {
+        justify-content: flex-start;
+    }
+    .single-search span {
+        color: #9098A4;
+        margin-right: 20px;
+    }
+    .mb__20{
+        margin-bottom: 20px;
+    }
+    .mr-14{
+        margin-right: 0;
+    }
+    .mt_gallary{
+        margin-top: 138px;
+    }
+    .mt_gallary .small_gallary img{
+        height: 410px !important;
+    }
+    .tab-crose, .tablet-search {
+        font-size: 19px;
+        font-size: 1.9rem;
+        color: #6D7487;
+        cursor: pointer;
+        margin-right: 15px;
+        height: 47px;
+        width: 47px;
+        line-height: 47px;
+        text-align: center;
+        border-radius: 8px;
+        border: 1px solid #eee;
+    }
+    .tablet-search{
+        display: block;
+    }
+    .real-estate-search{
+        position: absolute;
+        top: 67px;
+        left: 0;
+        visibility: hidden;
+        opacity: 0;
+        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+        -webkit-transition: .5s;
+        transition: .5s;
+    }
+    .real-estate-search.active{
+      visibility: visible;
+      opacity: 1;
+      -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+    }
+    .search-control{
+        box-shadow: rgb(0 0 0 / 15%) 0px 5px 15px 0px;
+        background: #fff;
+        padding: 10px 20px;
+        border-radius: 10px;
+        margin-top: 12px;
+        z-index: 999;
+    }
+    .search-control .search-icon {
+        top: 14px;
+        right: 8px;
+    }
+    .real-row{
+        position: relative;
+    }
+    .new_antrygallary {
+        margin-top: 471px;
+    }
+    .counter_left{
+        margin-bottom: 30px;
+    }
+    .hero-content h4 {
+        font-size: 37px;
+        line-height: 47px;
+        margin-bottom: 13px;
+    }
+    .review-card {
+	   height: auto;
+    }
+    .footer-content {
+        padding: 0 20px;
+    }
+    .inner-col {
+        padding: 0 3%;
+    }
+    .share-area-btn {
+        margin-top: 40px;
+    }
+    .single-small-slide img {
+        width: 100%;
+        height: 175px;
+        object-fit: cover;
+    }
+}
+
+@media all and (max-width:767px){
+    .listing-btn {
+        padding: 11px 13px;
+    }
+    .toggle-icon, .crose-icon {
+        height: 44px;
+        width: 44px;
+        line-height: 44px;
+    }
+    h2 {
+        font-size: 50px;
+        line-height: 66px;
+    }
+    .bannar-content h2 {
+        margin-bottom: 12px;
+    }
+    .bannar-search button ,
+    .single-search .form-select {
+        width: 100%;
+    }
+    .single-search{
+        border: none;
+    }
+    .all-post-items {
+        -ms-grid-columns: (1fr)[1];
+            grid-template-columns: repeat(1,1fr);
+    }
+    .city-card-group .owl-nav .owl-prev, 
+    .city-card-group .owl-nav .owl-next {
+       display: none;
+    }
+    .title p {
+        font-size: 38px;
+        line-height: 50px;
+    }
+    .hero-content h4 {
+        font-size: 38px;
+        line-height: 50px;
+    }
+    .hero-icon {
+        height: 100px;
+        width: 100px;
+        margin-bottom: 50px;
+    }
+    .hero-icon a {
+        height: 60px;
+        width: 60px;
+        line-height: 60px;
+    }
+    .post-item {
+        max-width: 500px;
+        margin: auto;
+        padding-bottom: 25px;
+    }
+    .post-image a img {
+        height: 300px;
+    }
+    .client-area {
+        margin-bottom: 70px;
+    }
+    .hero-area,
+    .city-area {
+        margin-top: 70px;
+    }
+    .section-padding {
+        padding-top: 70px;
+    }
+    .slider-controls .owl-nav .owl-prev,
+     .slider-controls .owl-nav .owl-next {
+        height: 45px;
+        width: 45px;
+        line-height: 45px;
+    }
+    .slider-controls .owl-nav .owl-prev {
+        right: 52px;
+    }
+    .send-message-box .form-check{
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+    }
+    .send-message-box .btn {
+        padding: 13px 32px;
+    }
+    /* Real Estate  */
+    
+    .real-row{
+        position: relative;
+    }
+
+    .search-control .form-control{
+        padding-left: 30px;
+    }
+    .agent-poperty {
+        padding: 35px 15px;
+    }
+    .agentList-tab .nav-link {
+        width: 285px;
+    }
+    /* Details Page */
+    .sing-gallary img {
+        height: auto;
+    }
+    .large-single-slide img {
+        height: 350px;
+    }
+    .aprt-info:after {
+       display: none;
+    }
+    .p-overview-card .aprt-info {
+        margin-bottom: 15px;
+        margin-right: 10px;
+    }
+    .p-overview-card .sm-title {
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+    }
+    .address-type ul {
+        width: 100%;
+    }
+    .res-show-border li:last-child{
+        border-bottom: 1px solid #e6e6e6;
+    }
+    .res-hide-border li:last-child{
+        border-bottom: none !important;
+    }
+    .rl-map iframe {
+        height: 300px;
+    }
+    .antrytab-manage iframe {
+        height: 300px;
+    }
+    .antry-real-vedio img {
+        height: 300px;
+    }
+    /* New Css */
+    .new_header_right ul li a i{
+        margin-right: 24px;
+        margin-left: 0px;
+    }
+    .mt_gallary{
+        margin-top: 0px;
+    }
+    .counter_right h4{
+        font-size: 38px;
+    }
+    .title_gallary h4 {
+        font-size: 28px;
+        margin-bottom: 17px;
+    }
+    .slider-controls .product-entry .product-img img {
+        height: 220px;
+    }
+    .Egallary .small_gallary img,
+    .gallar-img img {
+        height: 280px !important;
+    }
+    .f-social-links ul {
+        justify-content: center;
+    }
+    .copyright-text {
+        text-align: center !important;
+    }
+    #map {
+	   height: 300px !important;
+    }
+    .adminPanel-pagi {
+        margin-bottom: 30px;
+    }
+    .more-slide {
+        position: inherit;
+        top: 0;
+        color: #000;
+        background: transparent;
+        max-width: 100%;    
+        display: inline-flex;
+        height: 89px;
+        margin: auto;
+        justify-content: center;
+        margin-bottom: 20px;
+    }
+    .more-slide span {
+        color: #808697;
+    }
+}
+
+@media all and (max-width:576px){
+    .login-btn {
+        margin-right: 16px;
+    }
+    .sm-show-btn{
+        display: block !important;
+    }
+    .sm-hide-btn{
+        display: none;
+    }
+    h2 {
+        font-size: 38px;
+        line-height: 48px;
+    }
+    .last_text{
+        font-size:38px !important;
+    }
+    .gallar-img img {
+        height: 300px;
+    }
+    .galalry-items {
+        margin-top: 0;
+    }
+    .save-img:before {
+	   display: none;
+    }
+    .section-intro h4,
+    .title p {
+        font-size: 30px;
+        line-height: 45px;
+    }
+    .section-intro p {
+        margin-bottom: 10px;
+    }
+    .hero-area,
+    .city-area {
+        padding: 90px 0;
+    }
+    /* footer Area */
+    .single-footer h3 {
+        margin-bottom: 10px;
+    }
+    .single-footer {
+        margin-top: 40px;
+    }
+    .footer-area {
+        padding-top: 10px;
+        padding-bottom: 20px;
+    }
+    .footer-bottom-link a {
+        font-size: 14px;
+    }
+    .copyright-text {
+        margin-top: 16px;
+    }
+    .copyright-text p {
+        font-size: 14px;
+    }
+    .footer-bottom-content {
+	  margin-top: 26px;
+    }
+    .footer-bottom-link {
+        margin-top: 20px;
+    }
+    /* footer Area */
+    /* Real Estate */
+    .hero-card{
+        -webkit-box-align: start !important;
+            -ms-flex-align: start !important;
+                    -ms-grid-row-align: flex-start !important;
+                align-items: flex-start !important;
+    }
+    .card-head-title {
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+    }
+    .no-data-img a {
+        padding: 12px 26px;
+    }
+    .agent-de-table li p span{
+        min-width:170px;
+    }
+    /* Details Page */
+    .veiw-right-item {
+        float: left;
+        margin-top: 30px;
+    }
+    .share-link {
+       -webkit-box-pack: start;
+           -ms-flex-pack: start;
+               justify-content: flex-start;
+        margin-top: 20px;
+    }
+    .ratings {
+        margin-left: 0 !important;
+    }
+    .veiw-right-item .bg-out-btn {
+        padding: 12px 23px;
+    }
+    .modal-antry-amen .antry-amen {
+        max-width: 100%;
+    }
+    .more-amentities span {
+        padding-top: 0;
+    }
+    /* New Css */
+   
+    .mt_gallary .small_gallary img,
+    .gallar-img img{
+        height: 300px !important;
+    }
+    .product-entry .product-img img{
+        height: 250px;
+    }
+    .gallary_text {
+        bottom: 20px;
+        left: 20px;
+    }
+    .gallary_text span {
+	  font-size: 20px;
+    }
+    .gallary_text p {
+        font-size: 14px;
+    }
+    .new_antrygallary {
+        margin-top: 1032px;
+    }
+}
+@media all and (max-width:500px){
+    .agent-img img{
+        max-width: 100%;
+        min-height: auto;
+    }
+    .info {
+        line-height: 24px;
+        padding-top: 10px;
+    }
+    .rl-title {
+        margin-right: 20px;
+    }
+
+}
+@media all and (max-width:440px){
+    .menu-items {
+        max-width: 250px;
+    }
+    .bannar-search button {
+        margin-top: 15px;
+    }
+	.post-meta {
+	 margin:0;
+    }
+	.post-meta ul {
+	-ms-flex-wrap: wrap !important;
+	    flex-wrap: wrap !important;
+   }
+   /* Real Estate */
+   .antry-amen {
+	max-width: 100%;
+   }
+   .map-item {
+	-ms-flex-preferred-size: 100%;
+	    flex-basis: 100%;
+  }
+  .map-item img {
+	height: 200px;
+	width: 100%;
+	-o-object-fit: cover;
+	   object-fit: cover;
+   }
+   .rel-flex{
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+   }
+   .rel-ag-img img {
+	margin-bottom: 20px;
+  } 
+  .map-item:not(:last-child) {
+    margin-right: 0;
+  }
+
+  /* New Css */
+  .new_header_left ul li{
+    margin-right: 14px;
+  }
+  .listing-btn {
+	padding: 11px 8px; 
+  }
+}
