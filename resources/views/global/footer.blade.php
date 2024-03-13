@@ -64,10 +64,10 @@ $categoris = App\Models\Listing_arrtibute_type::where('listring_attribute_id', 1
                     <div class="single-footer">
                         <h3>{{get_phrase("Usefull Links")}}</h3>
                             <ul class="footer-menu-link">
-                                <li><a href="{{ route('home') }}">{{ get_phrase('Home') }}</a></li>
-                                <li><a href="{{ route('realeStateListingsFilter') }}">{{ get_phrase('Listings') }}</a></li>
-                                <li><a href="{{ route('subscriptionPackages') }}">{{ get_phrase('Pricing') }}</a></li>
-                                <li><a href="{{ route('blogGrid') }}">{{ get_phrase('Blog') }}</a></li>
+                                <li><a href="">{{ get_phrase('Home') }}</a></li>
+                                <li><a href="">{{ get_phrase('Listings') }}</a></li>
+                                <li><a href="">{{ get_phrase('Pricing') }}</a></li>
+                                <li><a href="">{{ get_phrase('Blog') }}</a></li>
                                 
                             </ul>
                     </div>

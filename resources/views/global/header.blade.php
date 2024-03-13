@@ -33,9 +33,9 @@
                <!-- Logo Area Start -->
                   <div class="logo">
                      @if(get_frontend_settings('dark_logo'))
-                     <a href="{{ route('home') }}"><img src="{{ asset('public/assets/uploads/logo/'.get_frontend_settings('dark_logo')) }}" alt="Logo Image"></a>
+                     <a href=""><img src="{{ asset('public/assets/uploads/logo/'.get_frontend_settings('dark_logo')) }}" alt="Logo Image"></a>
                      @else
-                     <a href="{{ route('home') }}"><img src="{{ asset('public/assets/global/images/logo/dark_logo.png') }}" alt="Logo Image"></a>
+                     <a href=""><img src="{{ asset('public/assets/global/images/logo/dark_logo.png') }}" alt="Logo Image"></a>
                      @endif
                   </div>
                <!-- Logo Area End   -->
@@ -44,7 +44,7 @@
                <!-- Header Menu Start -->
                <nav class="header-menu">
                   <ul class="primary-menu">
-                     <li class="{{request()->is('/')?'active':''}}"><a href="{{ route('home') }}">{{ get_phrase('Home') }}</a></li>
+                     
                      <li class="{{request()->is('listings')?'active':''}}" ><a href="{{ route('realeStateListings') }}">{{ get_phrase('Listing') }}</a></li>
                      <li class="{{request()->is('pricing')?'active':''}}"><a href="{{ route('subscriptionPackages') }}">{{ get_phrase('Pricing') }}</a></li>
                      @if(get_frontend_settings('blog_visibility_on_home_page') == 1)

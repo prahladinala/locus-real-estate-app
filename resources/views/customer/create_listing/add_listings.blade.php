@@ -309,28 +309,6 @@
         });
     });
 
-    <?php if (get_settings("active_map") == 'openstreetmap'): ?>
-
-        //free map
-        var map = L.map('map').setView([<?=get_settings('default_location');?>], 13);
-        L.tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-            attribution: '<a href="{{ route('home') }}" target="_blank"><?=get_settings("system_title");?></a>',
-            gestureHandling: true
-        }).addTo(map);
-
-    <?php else: ?>
-
-        //paid maps
-        var map = L.map('map').setView([<?=get_settings('default_location');?>], 13);
-        L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}', {
-            attribution: '<a href="{{ route('home') }}" target="_blank"><?=get_settings("system_title");?></a>',
-            id: 'mapbox/streets-v11',
-            accessToken: '<?=get_settings("map_access_token");?>',
-            gestureHandling: true
-        }).addTo(map);
-
-    <?php endif;?>
-
     var popup = L.popup();
     map.on('click', onMapClick);
 
